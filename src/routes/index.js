@@ -8,15 +8,15 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      redirect: '/main',
+      redirect: '/dark',
     },
     {
-      path: '/main',
-      component: () => import('@/views/MainPage.vue'),
+      path: '/dark',
+      component: () => import('@/views/Dark.vue'),
     },
     {
-      path: '/login',
-      component: () => import('@/views/LoginPage.vue'),
+      path: '/light',
+      component: () => import('@/views/Light.vue'),
     },
   ],
 });
