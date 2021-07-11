@@ -11,8 +11,10 @@
         </nav>
       </div>
     </header>
-    <article class="content">
-      <img v-for="(item, index) in items" :key="index" :src="item.src" />
+    <article>
+      <div class="content">
+        <img v-for="(item, index) in items" :key="index" :src="item.src" />
+      </div>
     </article>
   </div>
 </template>
@@ -47,7 +49,8 @@ export default {
     z-index: 10;
     position: fixed;
     box-sizing: border-box;
-    background: #000;
+    backdrop-filter: blur(4px);
+    background: rgba(20, 22, 26, 0.78);
 
     .header-wrapper {
       height: 100%;
@@ -75,12 +78,14 @@ export default {
   article {
     display: flex;
     flex-direction: column;
-    margin: 2.75% auto 0;
-    img {
-      display: block;
-      margin: 0 auto;
-      border-radius: 14px;
-      margin-bottom: 9px;
+    .content {
+      margin: 2.75% auto 0;
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 14px;
+        margin-bottom: 9px;
+      }
     }
   }
 }

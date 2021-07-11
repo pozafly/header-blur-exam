@@ -11,8 +11,10 @@
         </nav>
       </div>
     </header>
-    <article class="content">
-      <img v-for="(item, index) in items" :key="index" :src="item.src" />
+    <article>
+      <div class="content">
+        <img v-for="(item, index) in items" :key="index" :src="item.src" />
+      </div>
     </article>
   </div>
 </template>
@@ -74,12 +76,14 @@ export default {
   article {
     display: flex;
     flex-direction: column;
-    margin: 2.75% auto 0;
-    img {
-      display: block;
-      margin: 0 auto;
-      border-radius: 14px;
-      margin-bottom: 9px;
+    .content {
+      margin: 2.75% auto 0;
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 14px;
+        margin-bottom: 9px;
+      }
     }
   }
 }
